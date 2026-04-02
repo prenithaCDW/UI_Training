@@ -24,9 +24,11 @@ body::before{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   top: 3rem;
   width: 5.7rem;
   height: 6.4rem;
+  padding-top: 0.5rem;
   background-color: #000000;
   cursor: pointer;
 }
@@ -36,9 +38,16 @@ body::before{
   transform: translateX(0);
 }
 
-.menu-icon i {
-  color: white;
+
+.menu-icon span {
+  display: inline-block;
+  width: 1.875rem;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 0.45rem;
+  border-radius: 0.25rem;
 }
+
 
 .navbar {
   position: fixed;
