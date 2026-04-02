@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: #fff;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('./assets/background-image.png');
+  filter: brightness(0.75);
+  z-index: -1;
+}
+
+.menu-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 3rem;
+  width: 5.7rem;
+  height: 6.4rem;
+  background-color: #000000;
+}
+
+.menu-icon:hover + .navbar,
+.navbar:hover {
+  transform: translateX(0);
+}
+
+.menu-icon i {
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  transform: translateX(-100%);
+  top: 13.9%;
+  width: 16.82rem;
+  height: 53.5rem;
+  background: #000000;
+  border-radius: 0 2rem 2rem 0;
+  padding:3rem 0 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+.navbar .image-item {
+  text-align: center;
+  padding:0.3rem 0 2.3rem;
+}
+
+.navbar .image-hat {
+  transform: scaleY(1.1);
+  width: 6.25rem;
+}
+
+.item {
+  transform: scaleY(1.1);
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  color: #ffffffeb;
+  padding-bottom: 1.9rem;
+  font-size: 1.17rem;
+}
+
+.item:hover {
+  transform: scale(1.5);
+  color: #cccccca2;
+}
+
+.content .sub-title {
+  position: absolute;
+  text-align: center;
+  font-family: "Roboto condensed", sans-serif;
+  top: 4.9%;
+  left: 36.57%;
+  font-size: 5.7rem;
+  font-weight: 600;
+}
+
+.content .title {
+  position: absolute;
+  font-family: "Roboto condensed", sans-serif;
+  top: 68%;
+  left: 31.5%;
+  font-size: 8.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1;
+  line-height: 8.8rem;
+}
+
+.content .title .bold-title {
+  display: block;
+  transform: scaleY(1.17);
+  font-size: 9.35rem;
+}
+
+.time {
+  transform: rotate(270deg) translateX(33.8rem) translateY(48.3rem);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.time .year {
+    margin: 1rem;
+    font-weight: 700;
+    font-size: 7.3rem;
+    letter-spacing: 0.4rem;
+  }
+
+.socials {
+  position: absolute;
+  display: flex;
+  right: 1.5rem;
+  bottom: 1.5625rem;
+  gap: 1rem;
+}
+
+.socials .socials-icon {
+  transition: transform 0.2s;
+  color: white;
+  font-size: 2.2rem;
+  margin-left: 0.1rem;
+}
+
+.socials .socials-icon:hover {
+  transform: scale(1.3);
+}
