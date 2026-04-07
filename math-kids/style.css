@@ -59,15 +59,15 @@ body {
 
 }
 
-.circle {
+/* .circle {
     width: 9.6875rem;
     height: 9.6875rem;
     border-radius: 50%;
     background-color: #43967d;
     cursor: pointer;
-}
+} */
 
-.triangle {
+/* .triangle {
     width: 9.9rem;
     height: 9.8rem;
     background-color: #e996cb;
@@ -80,7 +80,7 @@ body {
     height: 9.6875rem;
     background-color: #e0e0e0;
     cursor: pointer;
-}
+} */
 .tick {
   position: absolute;
   width: 3.4375rem;
@@ -97,7 +97,7 @@ body {
     top:48%;
 }
 
-.shape.selected>.tick {
+.shape.selected .tick {
     display: block;
 }
 
