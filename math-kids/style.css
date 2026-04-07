@@ -47,7 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 4.4rem;
+    gap: 4.7rem;
     padding-top: 6.25rem;
 }
 
@@ -68,9 +68,9 @@ body {
 }
 
 .triangle {
-    width: 9.6875rem;
-    height: 9.6875rem;
-    background-color: #e897ca;
+    width: 9.9rem;
+    height: 9.8rem;
+    background-color: #e996cb;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     cursor: pointer;
 }
@@ -81,12 +81,20 @@ body {
     background-color: #e0e0e0;
     cursor: pointer;
 }
+.tick {
+  position: absolute;
+  width: 3.4375rem;
+  height: 1.75rem;
+  border-left: 2.5px solid white;
+  border-bottom: 2.5px solid white;
+  transform: rotate(-45deg);
+  top: 37%;
+  left: 32%;
+  display: none; 
+}
 
-.shape>.tick {
-    display: none;
-    font-size: 70px;
-    color: #fff;
-    position: relative;
+.triangle .tick{
+    top:48%;
 }
 
 .shape.selected>.tick {
