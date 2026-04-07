@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math-Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <!-- heading -->
+    <header class="heading">
+        <h3>MATH KIDS</h3>
+        <h3>KIDS LEARNING APP</h3>
+    </header>
+
+    <main class="display-area">
+        <!-- area 1 -->
+        <section class="area one" id="chooseShape">
+            <p class="area-title">1.Choose a Shape</p>
+            <div class="shapes" id="shapesContainer">
+            </div>
+            <button class="area-one-btn" id="nxtBtn">NEXT</button>
+        </section>
+        <!-- area 2 -->
+        <section class="area two" id="calculateMeasure">
+            <p class="area-title"></p>
+            <input type="text" class="input" />
+            <button class="area-two-btn">CALCULATE</button>
+      </section>
+      <!-- area 3 -->
+      <section class="area three" id="displayMeasurement">
+        <span class="area-shape"></span>
+        <section class="area-measurements">
+          <p class="area-title"></p>
+          <article class="measurement" id="side">
+            <span class="left-side"></span>
+            <span class="formula"></span>
+            <span class="calculate"></span>
+          </article>
+          <article class="measurement" id="area">
+            <span class="left-side">AREA </span>
+            <span class="formula"></span>
+            <span class="calculate"></span>
+          </article>
+          <article class="measurement" id="perimeter">
+            <span class="left-side">PERIMETER </span>
+            <span class="formula"></span>
+            <span class="calculate"></span>
+          </article>
+        </section>
+        <button class="area-three-btn">START AGAIN</button>
+      </section>
+    </main>
+</body>
+</html>
