@@ -82,7 +82,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     margin-left: 2rem;
-    gap: 1.2rem;
+    gap: 1rem;
 }
 
 .brands .brand-item {
@@ -140,6 +140,13 @@ main {
 
 .footer .footer-tag {
     font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .brands-area {
+        text-align: center;
+        padding: 0.1rem 0rem;
+    }
 }
 
 /* phone view */
