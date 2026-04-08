@@ -27,7 +27,7 @@
 26. Apple:not(.small)
 27. [for]
 28. plate[for]
-29. bento[for=“Vitaly”}
+29. bento[for=“Vitaly”]
 30. [for^=“Sa”]
 31. [for“ato”]
 32. [for*=“obb”]

@@ -1,0 +1,73 @@
+/* descendant */
+ol li{
+    color: aqua;
+}
+
+/* child */
+ol > li{
+    color: blue;
+}
+
+/* adjacent sibling */
+li + p{
+    color: brown;
+}
+
+/* general sibling */
+li ~ p{
+    color: blueviolet;
+}
+
+/*  pseudo - */
+li:first-child{
+    background-color: brown;
+}
+
+div :only-child{
+    background-color: aliceblue;
+}
+
+ol :last-child{
+    background-color: green;
+} 
+
+li:nth-child(3){
+    background-color: yellow;
+}
+
+ol :first-of-type{
+    background-color: pink;
+}
+
+ol :first-child{
+    background-color: plum;
+}
+
+li:first-child{
+    background-color: aquamarine;
+}
+
+li:nth-of-type(6){
+    background-color: aquamarine;
+}
+
+li:nth-child(6){
+background-color: blue;
+}
+
+p:not(.special) {
+     background: #9e2020; 
+} 
+
+/* attribute selectors */
+li[class^="item"]{
+    font-style: italic;
+}
+
+li[class$="6"]{
+    font-weight: bold;
+}
+
+li[class*="2"]{
+    background-color: aqua;
+}
