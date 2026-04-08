@@ -4,7 +4,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const currentYear = new Date().getFullYear();
-  let isFormValid = true;
+  let isFormValid = false;
 
   function showError(input, message) {
     const errorDisplay = input.nextElementSibling;
@@ -114,10 +114,9 @@ form.addEventListener("submit", function (e) {
   } else {
     clearError(cvv);
   }
-
-  // Final submit
+  isFormValid = form.querySelectorAll(".error").length === 0;
   if (isFormValid) {
-    alert("Payment completed successfully ✅");
+    alert("Payment completed successfully");
     form.reset();
   }
 });
