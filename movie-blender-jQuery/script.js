@@ -6,6 +6,7 @@ $(document).ready(function () {
   const $commentsContainer = $(".comments-container");
   const $playBtn = $(".play-btn");
   const $icon = $playBtn.find("i");
+  let fadeTimeout;
   function loadMovieData() {
     $.getJSON("./data/video.json").done(function (dataMovie) {
 
@@ -13,14 +14,14 @@ $(document).ready(function () {
       $titleElement.text(dataMovie.title);
       $descriptionElement.text(dataMovie.description);
 
-      $.each(dataMovie.comments, function (_,commentData) {
+      $.each(dataMovie.comments, function (_, commentData) {
         const $divComment = $("<div>").addClass("comment-content");
         const $img = $("<img>").addClass("comment-image").attr("src", commentData.image).attr("alt", commentData.name);
         const $divContent = $("<div>").addClass("content");
         const $name = $("<h5>").addClass("comment-name").text(commentData.name);
         const $comment = $("<p>").addClass("comment").text(commentData.comment);
 
-        $divContent.append($name,$comment);
+        $divContent.append($name, $comment);
         $divComment.append($img, $divContent);
         $commentsContainer.append($divComment)
         $movieSection.append($commentsContainer);
@@ -55,6 +56,7 @@ $(document).ready(function () {
     } else {
       $videoElement.get(0).pause();
     }
+    showIconTemporarily();
   });
 
   $videoElement.on("play", function () {
@@ -64,4 +66,17 @@ $(document).ready(function () {
   $videoElement.on("pause", function () {
     $icon.removeClass("fa-pause").addClass("fa-play");
   });
+
+    $videoElement.on("mousemove click", function () {
+    showIconTemporarily();
+  });
+
+  function showIconTemporarily() {
+    $playBtn.stop().fadeIn(10);
+    clearTimeout(fadeTimeout);
+    fadeTimeout = setTimeout(() => {
+      $playBtn.fadeOut(500);
+    }, 4000);
+  }
 });
+

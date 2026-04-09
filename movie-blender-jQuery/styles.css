@@ -90,6 +90,7 @@ body {
 }
 
 .play-btn {
+    display: none;
     position: absolute;
     top: 54%;
     left: 50%;
