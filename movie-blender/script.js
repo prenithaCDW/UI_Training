@@ -5,6 +5,7 @@ const movieSection = document.querySelector(".movies-container");
 const commentsContainer = document.querySelector(".comments-container");
 const playBtn = document.querySelector(".play-btn");
 const icon = playBtn.querySelector("i");
+let fadeTimeout;
 async function loadMovieData() {
   try {
     const response = await fetch("./data/video.json");
@@ -73,11 +74,27 @@ playBtn.addEventListener("click", () => {
 });
 
 videoElement.addEventListener("play", () => {
-    icon.classList.remove("fa-play");
-    icon.classList.add("fa-pause");
+  icon.classList.remove("fa-play");
+  icon.classList.add("fa-pause");
 });
 
 videoElement.addEventListener("pause", () => {
-    icon.classList.remove("fa-pause");
-    icon.classList.add("fa-play");
+  icon.classList.remove("fa-pause");
+  icon.classList.add("fa-play");
 });
+
+videoElement.addEventListener("mousemove", showIconTemporarily);
+videoElement.addEventListener("click", showIconTemporarily);
+
+function showIconTemporarily() {
+  playBtn.style.display = "block";
+  playBtn.style.opacity = "1";
+  clearTimeout(fadeTimeout);
+  fadeTimeout = setTimeout(() => {
+    playBtn.style.transition = "opacity 0.5s";
+    playBtn.style.opacity = "0";
+    setTimeout(() => {
+      playBtn.style.display = "none";
+    }, 200);
+  }, 2000);
+}
