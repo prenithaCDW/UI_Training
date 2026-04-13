@@ -68,7 +68,7 @@ main {
 
 .brands-area {
     text-align: center;
-    padding: 0.1rem 7.8rem;
+    padding: 0rem 7.8rem;
 }
 
 .brands-area h2 {
@@ -103,7 +103,25 @@ main {
 }
 
 .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 4.9rem;
+    gap: 2.3rem;
+    width: 100%;
+}
+
+.line span {
+    height: 1.5px;
+    background-color: #fff;
+}
+
+.line-short {
+    width: 2%;
+}
+
+.line-long {
+    width: 13%;
 }
 
 .social-media {
@@ -187,7 +205,7 @@ main {
     }
 
     .brands-area {
-        padding: 1rem 0 1rem;
+        padding: 3.9rem 0 1rem;
     }
 
     .brands-area h2 {
@@ -227,6 +245,15 @@ main {
 
     .line {
         margin-bottom: 0.9rem;
+        gap:1.5rem;
+    }
+
+    .line-short {
+        width: 6%;
+    }
+
+    .line-long {
+        width:32%;
     }
 
     .footer {
