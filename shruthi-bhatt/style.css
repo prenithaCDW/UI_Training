@@ -80,14 +80,13 @@ main {
 }
 
 .brands {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
     justify-content: center;
     align-items: center;
+    justify-items: center;
     padding-bottom: 3rem;
-    margin: auto;
     gap: 6.9rem;
-    width: 100%;
 
     #spotify {
         height: 2.875rem;
@@ -119,6 +118,12 @@ main {
         width: 7.5625rem;
     }
 }
+
+.brands .brand-item {
+    flex: 0 0 auto;
+    flex-shrink: 0;
+}
+
 
 .highlight-green {
     color: #c2e891;
@@ -190,6 +195,20 @@ main {
     font-size: 1.5rem;
 }
 
+@media(max-width:1440px)
+{
+    .brands{
+        gap:3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .brands {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+}
+
 @media(max-width: 768px) {
     .heading {
         order: 1;
@@ -225,7 +244,44 @@ main {
         object-fit: cover;
     }
 
+    .brands {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap:5.5rem;
+
+        #spotify {
+            height: 2.1875rem;
+            width: 6.5625rem;
+        }
+
+        #audi {
+            height: 2.1875rem;
+            width: 6rem;
+        }
+
+        #adidas {
+            height: 3.7rem;
+            width: 3.675rem;
+        }
+
+        #lufthansa {
+            height: 1.5rem;
+            width: 7.9375rem;
+        }
+
+        #ikea {
+            height: 2.3rem;
+            width: 7rem;
+        }
+
+        #montblanc {
+            height: 3.6rem;
+            width: 5.8rem;
+        }
+    }
+
     .brands-area {
+        width: 95%;
         order: 4;
     }
 
@@ -235,7 +291,7 @@ main {
         font-size: 2.2rem;
     }
 
-    .line{
+    .line {
         margin-bottom: 1.5rem;
     }
 
@@ -249,7 +305,7 @@ main {
 
     .footer {
         order: 5;
-        padding:8.5rem 0 3.5rem;
+        padding: 8.5rem 0 3.5rem;
     }
 
     .social-media {
