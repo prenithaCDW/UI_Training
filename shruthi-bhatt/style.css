@@ -251,33 +251,31 @@ main {
 
         #spotify {
             height: 2.1875rem;
-            width: 6.5625rem;
         }
 
         #audi {
             height: 2.1875rem;
-            width: 6rem;
         }
 
         #adidas {
             height: 3.7rem;
-            width: 3.675rem;
         }
 
         #lufthansa {
             height: 1.5rem;
-            width: 7.9375rem;
         }
 
         #ikea {
             height: 2.3rem;
-            width: 7rem;
         }
 
         #montblanc {
             height: 3.6rem;
-            width: 5.8rem;
         }
+    }
+
+    .brands img{
+        object-fit: contain;
     }
 
     .brands-area {
