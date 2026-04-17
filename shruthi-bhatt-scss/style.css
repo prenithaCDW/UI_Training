@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 93%;
+  max-width: 85.7rem;
+  margin: auto;
+}
+
+.email-section {
+  font-size: 1.8rem;
+  padding-top: 4.3rem;
+}
+.email-section .email {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heading {
+  text-align: center;
+  padding: 3rem 0;
+}
+.heading .name {
+  font-size: 10.8rem;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+.heading .name .name-bold {
+  font-weight: 650;
+}
+.heading .occupation {
+  margin-top: 0.9rem;
+  font-size: 3.65rem;
+  font-weight: 500;
+  color: #cecece;
+}
+
+.highlight-blue {
+  color: #5a8cd7;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 6.6rem 0 9.3rem;
+}
+.portfolio .portfolio-item {
+  width: calc((100% - 4rem) / 3);
+  height: 24.0625rem;
+  object-fit: cover;
+}
+
+.brands-area {
+  text-align: center;
+}
+.brands-area h2 {
+  font-size: 3.3rem;
+  padding: 0 7.8rem 4.2rem;
+  color: #cecece;
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 3rem;
+  gap: 6.9rem;
+}
+.brands #spotify {
+  height: 2.875rem;
+  width: 8.875rem;
+}
+.brands #audi {
+  height: 2.8125rem;
+  width: 8rem;
+}
+.brands #adidas {
+  height: 5.5rem;
+  width: 5.375rem;
+}
+.brands #lufthansa {
+  height: 1.875rem;
+  width: 8.9375rem;
+}
+.brands #ikea {
+  height: 3.75rem;
+  width: 9rem;
+}
+.brands #montblanc {
+  height: 4.25rem;
+  width: 7.5625rem;
+}
+.brands .brand-item {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+}
+
+.highlight-green {
+  color: #c2e891;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 15rem 0 10rem;
+}
+.footer .footer-tag {
+  font-size: 1.5rem;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4.9rem;
+  gap: 2.3rem;
+  width: 100%;
+}
+.line span {
+  height: 1.5px;
+  background-color: #fff;
+}
+.line-short {
+  width: 2%;
+}
+.line-long {
+  width: 13%;
+}
+
+.social-media {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.social-media a .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.64rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 1.8rem;
+  border: 1px solid;
+  border-radius: 60%;
+  transition: color 0.3s ease;
+}
+.social-media a .social-icons:hover {
+  color: #c2e891;
+}
+
+/* media queries */
+@media (max-width: 1440px) {
+  .brands {
+    gap: 3rem;
+  }
+}
+@media (max-width: 1024px) {
+  .brands {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+/* tablet width */
+@media (max-width: 768px) {
+  .heading {
+    order: 1;
+    padding: 15rem 0 0.5rem;
+  }
+  .heading .name {
+    font-size: 3.7rem;
+  }
+  .heading .occupation {
+    font-size: 2.1rem;
+  }
+  .email-section {
+    order: 2;
+    padding-top: 0;
+  }
+  .email-section .email {
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  .portfolio {
+    order: 3;
+    padding: 6.6rem 0 5.5rem;
+  }
+  .portfolio .portfolio-item {
+    width: 100%;
+    height: 24.0625rem;
+    object-fit: cover;
+  }
+  .brands {
+    order: 4;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 5.5rem;
+  }
+  .brands #spotify {
+    height: 2.1875rem;
+  }
+  .brands #audi {
+    height: 2.1875rem;
+  }
+  .brands #adidas {
+    height: 3.7rem;
+  }
+  .brands #lufthansa {
+    height: 1.5rem;
+  }
+  .brands #ikea {
+    height: 2.3rem;
+  }
+  .brands #montblanc {
+    height: 3.6rem;
+  }
+  .brands img {
+    object-fit: contain;
+  }
+  .brands-area {
+    order: 4;
+    width: 95%;
+  }
+  .brands-area h2 {
+    padding: 0 1rem 5rem;
+    font-size: 2.2rem;
+  }
+  .line {
+    margin-bottom: 1.5rem;
+  }
+  .line-short {
+    width: 7%;
+  }
+  .line-long {
+    width: 40%;
+  }
+  .footer {
+    order: 5;
+    padding: 8.5rem 0 3.5rem;
+  }
+  .social-media {
+    margin-bottom: 2rem;
+    gap: 1.7rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
