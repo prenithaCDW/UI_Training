@@ -26,13 +26,13 @@ let notes = JSON.parse(localStorage.getItem("notes")) || [];
 const activeNoteId = Number(localStorage.getItem("activeNoteId"));
 const activeNote = notes.find(n => Number(n.id) === activeNoteId);
 if (!activeNote) {
-    window.location.href = "http://127.0.0.1:5500/pocket-notes/index.html";
+    window.location.href = "./index.html";
 }
 let selectedColor = activeNote.color;
 
 //back arrow 
 backArrow.addEventListener("click", () => {
-    window.location.href = "http://127.0.0.1:5500/pocket-notes/index.html";
+    window.location.href = "./index.html";
 });
 
 deleteBtn.addEventListener("click", () => {
@@ -143,7 +143,7 @@ deleteConfirm.addEventListener("click", () => {
     notes = notes.filter(n => n.id !== activeNoteId);
     localStorage.setItem("notes", JSON.stringify(notes));
     localStorage.removeItem("activeNoteId");
-    window.location.href = "http://127.0.0.1:5500/pocket-notes/index.html";
+    window.location.href = "./index.html";
 });
 
 renderSingleNote();

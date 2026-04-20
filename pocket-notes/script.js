@@ -36,23 +36,23 @@ let visibleCount = LOAD_BATCH;
 //open/close the new notes container
 newBtnNotes.addEventListener("click", () => {
     panelNotes.style.display = 'flex';
-    overlay.style.display = "block";;
+    overlay.style.display = "block";
 });
 
 closeBtnNotes.addEventListener("click", () => {
     leaveContainer.style.display = 'block';
-    overlay.style.display = "block";;
+    overlay.style.display = "block";
 });
 
 leaveConfirm.addEventListener("click", () => {
-  leaveContainer.style.display = "none";
-  panelNotes.style.display = "none";
-  overlay.style.display = "none"();
-  resetForm(); 
+    leaveContainer.style.display = "none";
+    panelNotes.style.display = "none";
+    overlay.style.display = "none";
+    resetForm();
 });
 
 leaveClose.addEventListener("click", () => {
-  leaveContainer.style.display = "none";
+    leaveContainer.style.display = "none";
 });
 
 
@@ -94,7 +94,7 @@ addBtnNotes.addEventListener("click", () => {
     toggleEmpty();
     resetForm();
     panelNotes.style.display = "none";
-    overlay.style.display = "none"(); 
+    overlay.style.display = "none";
 });
 
 //rendering notes using fragment and sorted
@@ -110,7 +110,7 @@ function renderNotes() {
             card.innerHTML = `
         <h2 class="note-title">${note.title}</h2>
         <div class="note-date">${formatDate(note.updatedAt)}</div>
-        ${note.image? `<div class="note-image"><img src="${note.image}" alt="note image"></div>`: ""}
+        ${note.image ? `<div class="note-image"><img src="${note.image}" alt="note image"></div>` : ""}
         <p class="note-content">${note.content}</p>
         `;
             const img = card.querySelector('img');
@@ -118,9 +118,9 @@ function renderNotes() {
                 img.onerror = () => img.remove();
             }
             fragment.appendChild(card);
-            card.addEventListener("click",()=>{
-                localStorage.setItem("activeNoteId",note.id);
-                window.location.href = "http://127.0.0.1:5500/pocket-notes/note.html";
+            card.addEventListener("click", () => {
+                localStorage.setItem("activeNoteId", note.id);
+                 window.location.href = "./note.html";
             });
         });
     notesGrid.appendChild(fragment);
@@ -133,7 +133,7 @@ loadMoreConatiner.addEventListener("click", () => {
     renderNotes();
 });
 
-//if empty how to hangle function
+//if empty how to handle function
 function toggleEmpty() {
     const hasNotes = notes.length > 0;
     emptyContainer.style.display = hasNotes ? 'none' : 'flex';
@@ -162,7 +162,7 @@ deleteAllTrigger.addEventListener("click", () => {
 
 deleteAllClose.addEventListener("click", () => {
     deleteAllContainer.style.display = 'none';
-      overlay.style.display = "none"();
+    overlay.style.display = "none";
 });
 
 deleteAllConfirm.addEventListener("click", () => {
@@ -172,7 +172,7 @@ deleteAllConfirm.addEventListener("click", () => {
     notesGrid.innerHTML = "";
     toggleEmpty();
     deleteAllContainer.style.display = "none";
-      overlay.style.display = "none"();
+    overlay.style.display = "none";
 });
 
 //time format for notes
@@ -186,8 +186,8 @@ function formatDate(timestamp) {
 }
 
 window.addEventListener("storage", () => {
-  notes = JSON.parse(localStorage.getItem('notes')) || [];
-  renderNotes();
+    notes = JSON.parse(localStorage.getItem('notes')) || [];
+    renderNotes();
 });
 
 //initial storage
