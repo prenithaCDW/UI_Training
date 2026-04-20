@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Notes</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script defer src="./note.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="heading-container-note">
+        <!-- back arrow -->
+        <div class="back-arrow-container">
+            <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            <h1 class="heading">Pocket <span class="sub-heading">Notes</span></h1>
+        </div>
+        <!-- buttons -->
+        <span class="heading-button-container-note">
+            <button class="delete-note-button">DELETE</button>
+            <button class="edit-note-button">EDIT</button>
+        </span>
+    </header>
+
+    <main>
+
+        <!-- overlay -->
+        <div class="overlay"></div>
+        <!-- notes  -->
+        <section class="note-description-container">
+            <div class="note-description-title">
+                <span class="note-description-color"></span>
+                <div>
+                    <p class="note-description-heading"></p>
+                    <p class="note-description-date"></p>
+                </div>
+            </div>
+            <figure class="note-description-image"></figure>
+            <p class="note-description-content"></p>
+
+        </section>
+        <!-- edit notes  -->
+        <section class="edit-notes-container">
+            <!-- edit notes header -->
+            <section class="edit-notes-header">
+                <p class="edit-notes-header-content">EDIT NOTE</p>
+                <i class="fa-solid fa-xmark edit-notes-header-icon"></i>
+            </section>
+            <!-- edit notes body -->
+            <section class="edit-notes-body">
+                <input type="text" placeholder="Notes Title" class="edit-notes-body-title" />
+                <input type="text" placeholder="Add Image URL" class="edit-notes-body-image" />
+                <textarea placeholder="Add Content Here" class="edit-notes-body-content"></textarea>
+            </section>
+            <!-- edit notes footer -->
+            <section class="edit-notes-footer">
+                <div class="edit-notes-footer-color-container">
+                    <!-- color1 -->
+                    <span class="color-circle pink selected">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color2 -->
+                    <span class="color-circle white">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color3 -->
+                    <span class="color-circle yellow">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color4 -->
+                    <span class="color-circle green">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color5 -->
+                    <span class="color-circle orange">
+                        <span class="tick"></span>
+                    </span>
+                </div>
+                <button class="edit-notes-footer-save-button" disabled>SAVE</button>
+            </section>
+        </section>
+
+        <!-- note container -->
+        <section class="delete-note-container">
+            <div class="delete-note-header">
+                <p class="delete-note-heading">CONFIRM DELETE</p>
+                <i class="fa-solid fa-xmark delete-note-icon"></i>
+            </div>
+            <p class="delete-note-content">Are you sure you want to delete this note?</p>
+            <button class="delete-note-confirm">YES, DELETE</button>
+        </section>
+        
+        <!-- leave container -->
+        <section class="leave-container">
+            <div class="leave-header">
+                <p class="leave-heading">CONFIRM </p>
+                <i class="fa-solid fa-xmark leave-icon"></i>
+            </div>
+            <p class="leave-content">Seems like you are in the middle of adding/editing content. Do you want to leave?
+            </p>
+            <button class="leave-confirm">YES, CLOSE</button>
+        </section>
+    </main>
+
+</body>
+
+</html>
