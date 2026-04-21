@@ -30,6 +30,7 @@ body {
     background-color: #0a1c2d;
     width: 100%;
     color: #fff;
+    z-index: 1;
 
     .heading {
         font-family: "IBM Plex Sans", sans-serif;
@@ -464,7 +465,7 @@ body {
         border-radius: 0.3125rem;
         color: #000;
         cursor: pointer;
-
+        overflow-y: auto;
         &:hover {
             transform: scale(1.05);
         }
@@ -496,7 +497,7 @@ body {
             line-height: 1.59;
             word-spacing: 0.1px;
             font-weight: 350;
-            overflow: hidden;
+            
         }
 
         /* date */
@@ -873,7 +874,6 @@ body {
             width: 100%;
             height: 100%;
             border-radius: 0.75rem;
-            object-fit: cover;
         }
     }
 
@@ -1026,6 +1026,13 @@ body {
     .notes-grid {
         grid-template-columns: repeat(1, 1fr);
         width: 75%;
+    }
+
+    .note-description-container {
+        .note-description-color {
+            width: 3.9rem;
+            height: 3rem;
+        }
     }
 
 }
