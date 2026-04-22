@@ -33,6 +33,16 @@ let notes = JSON.parse(localStorage.getItem('notes')) || [];
 let selectedColor = localStorage.getItem('lastColor') || "pink";
 let visibleCount = LOAD_BATCH;
 
+//picking color
+colorCircles.forEach(circle => {
+    circle.addEventListener("click", () => {
+        colorCircles.forEach(c => c.classList.remove("selected"));
+        circle.classList.add("selected");
+        selectedColor = [...circle.classList].find(cls => cls !== 'color-circle' && cls !== 'selected');
+        localStorage.setItem('lastColor', selectedColor);
+    });
+});
+
 //open/close the new notes container
 newBtnNotes.addEventListener("click", () => {
     panelNotes.style.display = 'flex';
@@ -53,17 +63,6 @@ leaveConfirm.addEventListener("click", () => {
 
 leaveClose.addEventListener("click", () => {
     leaveContainer.style.display = "none";
-});
-
-
-//picking color
-colorCircles.forEach(circle => {
-    circle.addEventListener("click", () => {
-        colorCircles.forEach(c => c.classList.remove("selected"));
-        circle.classList.add("selected");
-        selectedColor = [...circle.classList].find(cls => cls !== 'color-circle' && cls !== 'selected');
-        localStorage.setItem('lastColor', selectedColor);
-    });
 });
 
 //validation

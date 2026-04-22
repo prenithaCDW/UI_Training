@@ -830,34 +830,40 @@ body {
     padding-top: 8.0625rem;
     gap: 1.625rem;
     color: white;
+    word-break: break-word;
 
     /* title */
     .note-description-title {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
-        width: 100%;
-    }
 
-    /* color */
-    .note-description-color {
-        width: 2.6875rem;
-        height: 2.6875rem;
-        border-radius: 50%;
-    }
+        /* color */
+        .note-description-color {
+            display: flex;
+            align-self: center;
+            width:30%;
+            width: 2.6875rem;
+            height: 2.6875rem;
+            border-radius: 50%;
+        }
 
-    /* heading */
-    .note-description-heading {
-        font-size: 1.75rem;
-        font-weight: 600;
-    }
+        .note-description-header {
+            width:86%;
+            /* heading */
+            .note-description-heading {
+                font-size: 1.75rem;
+                font-weight: 600;
+            }
 
-    /* date */
-    .note-description-date {
-        padding-top: 3px;
-        font-size: 0.9375rem;
-        font-weight: 300;
-        color: #cdcdcd;
+            /* date */
+            .note-description-date {
+                padding-top: 3px;
+                font-size: 0.9375rem;
+                font-weight: 300;
+                color: #cdcdcd;
+            }
+        }
     }
 
     /* image */
