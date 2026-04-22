@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Notes</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="heading-container">
+        <h1 class="heading">Pocket <span class="sub-heading">Notes</span></h1>
+        <span class="heading-button-container">
+            <button class="delete-all-trigger">DELETE ALL</button>
+            <button class="new-button">NEW</button>
+        </span>
+    </header>
+
+    <main class="main-container">
+        <!-- overlay -->
+        <div class="overlay"></div>
+        <!-- empty initial page -->
+        <section class="empty-container">
+            <figure class="empty-container-image">
+                <img src="./assets/cube.png" alt="cube" class="empty-container-image-display" />
+            </figure>
+            <p class="empty-container-content">Notes you add appear here</p>
+        </section>
+
+        <!-- notes grid -->
+        <section class="notes-grid">   
+        </section>
+
+        <!-- new notes  -->
+        <section class="new-notes-container">
+            <!-- new notes header -->
+            <section class="new-notes-header">
+                <p class="new-notes-header-content">NEW NOTE</p>
+                <i class="fa-solid fa-xmark new-notes-header-icon"></i>
+            </section>
+            <!-- new notes body -->
+            <section class="new-notes-body">
+                <input type="text" placeholder="Notes Title" class="new-notes-body-title" />
+                <input type="text" placeholder="Add Image URL" class="new-notes-body-image" />
+                <textarea placeholder="Add Content Here" class="new-notes-body-content"></textarea>
+            </section>
+            <!-- new notes footer -->
+            <section class="new-notes-footer">
+                <div class="new-notes-footer-color-container">
+                    <!-- color1 -->
+                    <span class="color-circle pink selected">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color2 -->
+                    <span class="color-circle white">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color3 -->
+                    <span class="color-circle yellow">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color4 -->
+                    <span class="color-circle green">
+                        <span class="tick"></span>
+                    </span>
+                    <!-- color5 -->
+                    <span class="color-circle orange">
+                        <span class="tick"></span>
+                    </span>
+                </div>
+                <button class="new-notes-footer-add-button" disabled>ADD</button>
+            </section>
+        </section>
+
+        <!-- load more button -->
+        <section class="load-more-container">
+            <button class="load-more-button">LOAD MORE</button>
+        </section>
+
+        <!-- delete all container -->
+        <section class="delete-all-container">
+            <div class="delete-all-header">
+                <p class="delete-all-heading">CONFIRM DELETE</p>
+                <i class="fa-solid fa-xmark delete-all-icon"></i>
+            </div>
+            <p class="delete-all-content">Are you sure you want to delete all notes?</p>
+            <button class="delete-all-confirm">YES, DELETE</button>
+        </section>
+
+        <!-- leave container -->
+        <section class="leave-container">
+            <div class="leave-header">
+                <p class="leave-heading">CONFIRM </p>
+                <i class="fa-solid fa-xmark leave-icon"></i>
+            </div>
+            <p class="leave-content">Seems like you are in the middle of adding/editing content. Do you want to leave?</p>
+            <button class="leave-confirm">YES, CLOSE</button>
+        </section>
+    </main>
+</body>
+
+</html>
