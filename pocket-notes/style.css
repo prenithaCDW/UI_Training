@@ -466,6 +466,7 @@ body {
         color: #000;
         cursor: pointer;
         overflow-y: auto;
+
         &:hover {
             transform: scale(1.05);
         }
@@ -497,7 +498,6 @@ body {
             line-height: 1.59;
             word-spacing: 0.1px;
             font-weight: 350;
-            
         }
 
         /* date */
